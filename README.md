@@ -2,8 +2,6 @@
 
 A small always-on-top trash can for Windows that you drop files and folders onto, so you can clear your desktop quickly and still undo every drop.
 
-> Screenshot: add `docs/screenshot.png` (placeholder line — leave it exactly like this for GUI apps)
-
 ## What it does
 - Moves every file you drop into one trash folder (by default `%USERPROFILE%\TrashCan`, for example `C:\Users\<you>\TrashCan`).
 - Empties a dropped folder: every file inside it, at any depth, goes into the trash folder, and then the empty folders are removed.
