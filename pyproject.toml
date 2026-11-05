@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "floating-trashcan"
+version = "1.0.0"
+description = "An always-on-top trash can you drop files onto, with binary duplicate checking and undo"
+requires-python = ">=3.10"
+dependencies = ["PySide6-Essentials>=6.5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pyinstaller>=6"]
+
+[project.gui-scripts]
+trashcan = "trashcan.app:main"
+
+[project.scripts]
+trashcan-cli = "trashcan.cli:main"
+
+[tool.setuptools]
+packages = ["trashcan"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["error::DeprecationWarning:trashcan.*"]
